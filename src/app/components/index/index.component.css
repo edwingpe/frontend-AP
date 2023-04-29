@@ -1,0 +1,10 @@
+.name-text {
+    font-family: var(--ff-body);
+    font-size: var(--fs-xxl);
+    font-weight: 600;
+}
+
+.title-text {
+    font-size: var(--fs-lg)
+}
+
