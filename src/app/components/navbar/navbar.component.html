@@ -21,18 +21,22 @@
             <a class="nav-link" routerLink="/contact">Contacto</a>
           </li>
         </ul>
-        <div class="login-box d-flex align-items-center">
-          <span class="navbar-brand">Usuario</span>
-          <div class="dropdown">
-            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="login-img" src="" alt="">
+        <div class="login-box d-flex align-items-center gap-2">
+          <div class="dropdown dropend">
+            <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="img-box">
+                <img class="login-img" src="/assets/img/default-user-img.jpg" alt="profile-img">
+              </div>
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Ingresar</a></li>
+              <li><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Ingresar</a></li>
+              
               <li><a class="dropdown-item" href="#">Salir</a></li>
             </ul>
           </div>  
+          <span class="navbar-brand">Usuario</span>
         </div>
       </div>
     </div>
-  </nav>
+</nav>
+<app-login></app-login>
