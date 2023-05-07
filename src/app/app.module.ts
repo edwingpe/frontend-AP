@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +17,7 @@ import { IndexModalComponent } from './components/index/index-modal/index-modal.
 import { LoginComponent } from './components/login/login.component';
 import { AboutModalComponent } from './components/about/about-modal/about-modal.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +36,9 @@ import { ExperienceComponent } from './components/experience/experience.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

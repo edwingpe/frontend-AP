@@ -32,12 +32,12 @@
               </div>
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Ingresar</a></li>
+              <li *ngIf="!isLoggedIn" ><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Ingresar</a></li>
               
-              <li><a class="dropdown-item" href="#">Salir</a></li>
+              <li *ngIf="isLoggedIn"><a class="dropdown-item" routerLink='/index' role="button" (click)="logout()">Salir</a></li>
             </ul>
           </div>  
-          <span class="navbar-brand">Usuario</span>
+          <span class="navbar-brand">{{username}}</span>
         </div>
       </div>
     </div>
