@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  experienciaURL = 'http://localhost8080/experiencia'
+  experienciaURL = 'http://localhost:8080/experiencia'
 
   constructor(private httpClient: HttpClient) { }
 
@@ -28,6 +28,6 @@ export class ExperienciaService {
   }
 
   public eliminar(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.experienciaURL + `/delete${id}/`)
+    return this.httpClient.delete<any>(this.experienciaURL + `/delete/${id}`)
   }
 }

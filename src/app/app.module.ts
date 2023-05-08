@@ -17,6 +17,8 @@ import { IndexModalComponent } from './components/index/index-modal/index-modal.
 import { LoginComponent } from './components/login/login.component';
 import { AboutModalComponent } from './components/about/about-modal/about-modal.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { EditExperienciaComponent } from './components/experience/edit-experiencia/edit-experiencia/edit-experiencia.component';
+import { NewExperienciaComponent } from './components/experience/new-experiencia/new-experiencia/new-experiencia.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { ExperienceComponent } from './components/experience/experience.componen
     IndexModalComponent,
     LoginComponent,
     AboutModalComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    EditExperienciaComponent,
+    NewExperienciaComponent
   ],
   imports: [
     BrowserModule,

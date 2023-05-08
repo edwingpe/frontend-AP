@@ -1,0 +1,51 @@
+<div class="container" *ngIf="experiencia">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Actualizar Experiencia</h1>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="nombreExperiencia" class="form-label">Empresa: </label>
+                        <input type="text" class="form-control" id="nombreExperiencia" name="nombreExperiencia"
+                            [(ngModel)]="experiencia.nombreExperiencia" required placeholder="" value="">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="tituloExperiencia" class="form-label">Cargo: </label>
+                        <input type="text" class="form-control" id="tituloExperiencia" name="tituloExperiencia"
+                            placeholder="" [(ngModel)]="experiencia.tituloExperiencia" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="descripcionExperiencia" class="form-label">Descripcion</label>
+                        <input type="text" class="form-control" id="descripcionExperiencia"
+                            name="descripcionExperiencia" [(ngModel)]="experiencia.descripcionExperiencia" required>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group py-2">
+                            <input type="text" class="form-control" id="fechaInicioExperiencia"
+                                name="fechaInicioExperiencia" placeholder="Username" required=""
+                                [(ngModel)]="experiencia.fechaInicioExperiencia">
+                        </div>
+                        <div class="input-group py-2">
+                            <input type="text" class="form-control" id="fechaFinalExperiencia"
+                                name="fechaFinalExperiencia" placeholder="Username" [(ngModel)]="experiencia.fechaFinalExperiencia"
+                                required="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="imgExperienciaURL" class="form-label">Logo Empresa:</label>
+                            <input class="form-control form-control-sm" id="imgExperienciaURL" name="imgExperienciaURL"
+                                type="text" [(ngModel)]="experiencia.imgExperienciaURL">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" routerLink='/experience'>Cerrar</button>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+            </div>
+        </div>
+    </form>
+</div>
