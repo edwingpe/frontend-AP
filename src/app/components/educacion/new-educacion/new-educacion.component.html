@@ -1,0 +1,30 @@
+<div class="container">
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Nueva Educacion</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="nombreEducacion" class="form-label">Empresa: </label>
+                        <input type="text" class="form-control" id="nombreEducacion" name="nombreEducacion"
+                            [(ngModel)]="nombreEducacion" required placeholder="" value="">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="descripcionEducacion" class="form-label">Cargo: </label>
+                        <input type="text" class="form-control" id="descripcionEducacion" name="descripcionEducacion"
+                            placeholder="" [(ngModel)]="descripcionEducacion" required>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" routerLink="/experience">Cerrar</button>
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+        </div>
+    </form>
+</div>

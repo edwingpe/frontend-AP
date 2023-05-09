@@ -1,15 +1,13 @@
-import { Component } from '@angular/core';
-import { Persona } from './models/Persona';
-import { PersonaService } from './services/persona.service';
+import { Component, OnInit } from '@angular/core';
+import { Persona } from 'src/app/models/Persona';
+import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-index',
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.css']
 })
-export class AppComponent {
-  title = 'frontend-AP';
-
+export class IndexComponent implements OnInit {
   persona: Persona = new Persona("","","","","","","","","","","","","");
   data: any[] = [];
   
@@ -35,4 +33,5 @@ export class AppComponent {
       console.log(this.persona);
     })
   }
+
 }

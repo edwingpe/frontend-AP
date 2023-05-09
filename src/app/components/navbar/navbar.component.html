@@ -1,0 +1,45 @@
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" aria-label="Eighth navbar example">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample07">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/index">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about">Sobre mi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/experience">Experiencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/skills">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/projects">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact">Contacto</a>
+          </li>
+        </ul>
+        <div class="login-box d-flex align-items-center gap-2">
+          <div class="dropdown dropend">
+            <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="img-box">
+                <img class="login-img" src="/assets/img/default-user-img.jpg" alt="profile-img">
+              </div>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li *ngIf="!isLoggedIn" ><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Ingresar</a></li>
+              
+              <li *ngIf="isLoggedIn"><a class="dropdown-item" routerLink='/index' role="button" (click)="logout()">Salir</a></li>
+            </ul>
+          </div>  
+          <span class="navbar-brand">{{username}}</span>
+        </div>
+      </div>
+    </div>
+</nav>
+<app-login></app-login>

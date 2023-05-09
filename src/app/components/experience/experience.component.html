@@ -1,0 +1,54 @@
+<main class="container p-0 d-flex border border-2 border-warning d-flex flex-wrap flex-md-nowrap">
+    <div class="container p-0 border border-3 position-relative">
+        <div class="new-btn position-absolute top-0 start-100 translate-middle">
+            <a class="edit-btn" type="button" routerLink="/nueva-experiencia" *ngIf="isLogged">
+                <i class="fa-solid fa-square-plus fa-2xl" style="color: #ff5b5b;"></i>
+            </a>
+        </div>
+    
+        <div class="row">
+            <div class="col" *ngFor="let Experiencia of experiencia">
+                <div class="card p-3 mb-2 shadow border-1">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="icon"> <i class="bx bxl-mailchimp">img</i> </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">{{Experiencia.nombreExperiencia}}</h6>
+                                <span>{{Experiencia.fechaInicioExperiencia}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="heading">{{Experiencia.tituloExperiencia}}</h3>
+                        <div class="mt-5">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="mt-3" *ngIf="isLogged">
+                                <button class="edit-btn" type="button" routerLink='/edit-expe/{{Experiencia.experienciaId}}' >
+                                    <i class="fa-solid fa-pen fa-lg" style="color: #ff5b5b;"></i>
+                                </button>
+                            </div>
+                            <div class="mt-3" *ngIf="isLogged">
+                                <a class="edit-btn" type="button" (click)="delete(Experiencia.experienciaId)" >
+                                    <i class="fa-solid fa-trash fa-lg" style="color: #d52b2b;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container p-0 border border-3 position-relative">
+        <div class="new-btn position-absolute top-0 start-100 translate-middle">
+            <a class="edit-btn" type="button" routerLink="/nueva-educacion" *ngIf="isLogged">
+                <i class="fa-solid fa-square-plus fa-2xl" style="color: #ff5b5b;"></i>
+            </a>
+        </div>
+        <app-educacion></app-educacion>
+    </div>
+
+</main>
+
