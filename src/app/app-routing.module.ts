@@ -9,6 +9,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EditExperienciaComponent } from './components/experience/edit-experiencia/edit-experiencia/edit-experiencia.component';
 import { NewExperienciaComponent } from './components/experience/new-experiencia/new-experiencia/new-experiencia.component';
+import { NewEducacionComponent } from './components/educacion/new-educacion/new-educacion.component';
+import { EditEducacionComponent } from './components/educacion/edit-educacion/edit-educacion.component';
 
 const routes: Routes = [
   
@@ -17,12 +19,13 @@ const routes: Routes = [
   {path: 'about', component:AboutComponent},
   {path: 'experience',component:ExperienceComponent},
   {path: 'nueva-experiencia', component: NewExperienciaComponent},
-  {path: 'edit-expe/:id',component: EditExperienciaComponent},  
+  {path: 'edit-expe/:id',component: EditExperienciaComponent},
+  {path: 'nueva-educacion', component: NewEducacionComponent},
+  {path: 'edit-educacion/:id', component: EditEducacionComponent},
   {path: 'skills', component:SkillsComponent},
   {path: 'projects', component:ProjectsComponent},
   {path: 'contact', component:ContactComponent},
   {path: '', redirectTo: '/index', pathMatch: 'full' },
-  
 ];
 
 @NgModule({

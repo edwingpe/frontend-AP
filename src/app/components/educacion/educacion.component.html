@@ -1,1 +1,27 @@
 <p>educacion works!</p>
+<section class="educacion-cards container">
+    <div class="row">
+        <div *ngFor="let Educacion of educacion"class="col d-flex flex-column border border-1">
+            <div class="card-box">
+                <div class="card-img">
+
+                </div>
+                <div class="card-content">
+                    <h2>{{Educacion.nombreEducacion}}</h2>
+                    <p>{{Educacion.descripcionEducacion}}</p>
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <button routerLink="/edit-educacion/{{Educacion.educacionId}}"><i class="fa-solid fa-gear fa-lg" style="color: #71ad01;"></i>
+                    Editar
+                </button>
+                <button (click)="borrar(Educacion.educacionId)"><i class="fa-sharp fa-solid fa-trash fa-lg" style="color: #c40000;"></i>
+                    Borrar
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</section>
