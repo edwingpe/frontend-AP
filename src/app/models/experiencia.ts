@@ -1,5 +1,5 @@
 export class Experiencia {
-    experienciaId? : number;
+    experienciaId?: number;
     nombreExperiencia : string;
     tituloExperiencia : string;
     descripcionExperiencia : string;
@@ -7,7 +7,8 @@ export class Experiencia {
     fechaFinalExperiencia : string;
     imgExperienciaURL : string;
 
-    constructor(nombreExperiencia : string, descripcionExperiencia : string, tituloExperiencia : string, fechaInicioExperiencia : string, fechaFinalExperiencia: string, imgExperienciaURL: string){
+    constructor( nombreExperiencia : string, descripcionExperiencia : string, tituloExperiencia : string, fechaInicioExperiencia : string, fechaFinalExperiencia: string, imgExperienciaURL: string){
+
         this.nombreExperiencia = nombreExperiencia;
         this.tituloExperiencia = tituloExperiencia;
         this.descripcionExperiencia = descripcionExperiencia;
