@@ -19,6 +19,10 @@ import { AboutModalComponent } from './components/about/about-modal/about-modal.
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EditExperienciaComponent } from './components/experience/edit-experiencia/edit-experiencia/edit-experiencia.component';
 import { NewExperienciaComponent } from './components/experience/new-experiencia/new-experiencia/new-experiencia.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { EditEducacionComponent } from './components/educacion/edit-educacion/edit-educacion.component';
+import { NewEducacionComponent } from './components/educacion/new-educacion/new-educacion.component';
+
 
 
 @NgModule({
@@ -36,7 +40,11 @@ import { NewExperienciaComponent } from './components/experience/new-experiencia
     AboutModalComponent,
     ExperienceComponent,
     EditExperienciaComponent,
-    NewExperienciaComponent
+    NewExperienciaComponent,
+    EducacionComponent,
+    EditEducacionComponent,
+    NewEducacionComponent,
+    
   ],
   imports: [
     BrowserModule,
