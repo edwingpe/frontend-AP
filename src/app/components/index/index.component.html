@@ -4,9 +4,9 @@
             <div class="edit-box position-absolute top-0 start-100 translate-middle">
                 <a class="edit-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" routerLink="/index-modal"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>  
             </div>
-            <span class="name-text">{{persona.firstname}} </span>
-            <span class="name-text">{{persona.lastname}}</span>
-            <p class="title-text">{{persona.title}}</p>   
+            <span class="name-text">{{persona.nombre}} </span>
+            <span class="name-text">{{persona.apellido}}</span>
+            <p class="title-text">{{persona.titulo}}</p>   
         </div>
         
     </div>
@@ -17,6 +17,5 @@
             <a [href]="persona.codepenURL" target="_blank"><i class="fa-brands fa-codepen fa-2xl" style="color: #1e3050;"></i></a>
         </div>
     </div>
-    <app-index-modal></app-index-modal>
 </main>
 

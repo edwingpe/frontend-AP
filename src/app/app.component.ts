@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Persona } from './models/Persona';
+import { Persona } from './models/persona';
 import { PersonaService } from './services/persona.service';
 
 @Component({
@@ -10,13 +10,13 @@ import { PersonaService } from './services/persona.service';
 export class AppComponent {
   title = 'frontend-AP';
 
-  persona: Persona = new Persona("","","","","","","","","","","","","");
+  persona: Persona = new Persona("","","","","","","","","","","","");
   data: any[] = [];
   
 
   constructor(public personaService: PersonaService){}
 
-  ngOnInit():void{
+  /* ngOnInit():void{
     this.getData();
     this.getPersona();
     
@@ -33,6 +33,6 @@ export class AppComponent {
     this.personaService.getPersona().subscribe( data => {
       this.persona = data;
       console.log(this.persona);
-    })
-  }
+    }) */
+  
 }

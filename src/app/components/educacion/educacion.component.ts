@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Educacion } from 'src/app/models/educacion';
 import { EducacionService } from 'src/app/services/educacion.service';
 import { StorageService } from 'src/app/services/storage.service';
@@ -11,7 +12,8 @@ import { StorageService } from 'src/app/services/storage.service';
 export class EducacionComponent implements OnInit {
   educacion: Educacion[] = [];
 
-  constructor(private educacionService: EducacionService, private storageService: StorageService){ }
+  constructor(private educacionService: EducacionService, private storageService: StorageService,
+    private router: Router){ }
   isLogged = false;
   
   ngOnInit(): void {
@@ -35,6 +37,7 @@ export class EducacionComponent implements OnInit {
       this.educacionService.eliminar(id).subscribe(
         data => {
           this.cargarEducacion();
+          this.router.navigate(['./experience'])
         },err => {
             alert("Imposible Eliminar")
         }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona } from 'src/app/models/Persona';
+import { Persona } from 'src/app/models/persona';
 import { PersonaService } from 'src/app/services/persona.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-index',
@@ -8,29 +9,27 @@ import { PersonaService } from 'src/app/services/persona.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  persona: Persona = new Persona("","","","","","","","","","","","","");
-  data: any[] = [];
+  persona: Persona =  null
+ 
   
 
-  constructor(public personaService: PersonaService){}
+  constructor(public personaService: PersonaService, 
+    private storageService: StorageService){ }
+
+  isLogged = false
 
   ngOnInit():void{
-    this.getData();
-    this.getPersona();
-    
+    this.cargarPersona();
+    if(this.storageService.isLoggedIn()){
+      this.isLogged = true;
+    } else{
+      this.isLogged = false;
+    }
   }
 
-  getData(){
-    this.personaService.getData().subscribe( data => {
-      this.data = data;
-      console.log(this.data);
-    })
-  }
-
-  getPersona(){
-    this.personaService.getPersona().subscribe( data => {
+  cargarPersona(){
+    this.personaService.detalle(1).subscribe(data =>{
       this.persona = data;
-      console.log(this.persona);
     })
   }
 

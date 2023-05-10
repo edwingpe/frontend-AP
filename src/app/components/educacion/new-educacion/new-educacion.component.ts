@@ -23,10 +23,8 @@ export class NewEducacionComponent implements OnInit {
     this.educacionService.guardar(educacion).subscribe(
       data => {
         alert("Creacion Exitosa")
-        this.router.navigate(['experience'])
       }, err =>{
-        alert("Fallo")
-        this.router.navigate([''])
+        alert("Fallo") 
       })
   }
 }

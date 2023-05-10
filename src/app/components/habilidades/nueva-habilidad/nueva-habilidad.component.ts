@@ -18,7 +18,7 @@ export class NuevaHabilidadComponent implements OnInit{
     
   }
 
-  /* onCreate(): void {
+  onCreate(): void {
     const habilidad = new Habilidades(this.nombre, this.porcentaje);
     this.habilidadesService.guardar(habilidad).subscribe(
       data => {
@@ -29,16 +29,7 @@ export class NuevaHabilidadComponent implements OnInit{
         this.router.navigate([''])
       }
     )
-  } */
-
-  onCreate(): void {
-    const habilidad = new Habilidades(this.nombre, this.porcentaje);
-    this.habilidadesService.guardar(habilidad).subscribe({
-      next: (data) => alert("Habilidad Agregada"),
-      error: (err) => alert("No se puedo"),
-      complete: () => this.router.navigate(['habilidades']),
-    }
-      
-    )
   }
+
+  
 }
