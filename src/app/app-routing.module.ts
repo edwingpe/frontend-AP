@@ -12,6 +12,7 @@ import { HabilidadesComponent } from './components/habilidades/habilidades.compo
 import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilidad/nueva-habilidad.component';
 import { EditHabilidadComponent } from './components/habilidades/edit-habilidad/edit-habilidad.component';
 import { EditIndexComponent } from './components/index/edit-index.component';
+import { EditAboutComponent } from './components/about/edit-about.component';
 
 const routes: Routes = [
   
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'index', component:IndexComponent},
   {path: 'edit-index/:id', component: EditIndexComponent},
   {path: 'about', component:AboutComponent},
+  {path: 'edit-about/:id', component: EditAboutComponent},
   {path: 'experience',component:ExperienceComponent},
   {path: 'nueva-experiencia', component: NewExperienciaComponent},
   {path: 'edit-expe/:id',component: EditExperienciaComponent},

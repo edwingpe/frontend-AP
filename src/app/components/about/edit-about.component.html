@@ -1,0 +1,42 @@
+<div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5">Actualización de datos</h1>
+            <button type="button" class="btn-close" routerLink="/about"></button>
+        </div>
+        <div class="modal-body" *ngIf="persona">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="descripcion" class="form-label">Sobre ti:</label>
+                        <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.descripcion" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="username" class="form-label">Imagenes Galeria</label>
+                        <div class="input-group py-2">
+                            <span class="input-group-text">1</span>
+                            <input type="file" class="form-control" id="imageURL" placeholder="github" name="imageURL" [(ngModel)]="persona.imageURL">
+                        </div>
+                        <div class="input-group py-2">
+                            <span class="input-group-text">2</span>
+                            <input type="file" class="form-control" id="imageURL2" placeholder="linkedin"  name="imageUR2L" [(ngModel)]="persona.imageURL2">
+                        </div>
+                        <div class="input-group py-2">
+                            <span class="input-group-text">3</span>
+                            <input type="file" class="form-control" id="imageURL3" placeholder="imageURL3" name="imageURL3" [(ngModel)]="persona.imageURL3">
+                        </div>
+                        <div class="input-group py-2">
+                            <span class="input-group-text">4</span>
+                            <input type="file" class="form-control" id="imageURL4" placeholder="imageURL4"  name="imageURL4" [(ngModel)]="persona.imageURL4">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" routerLink="/about">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

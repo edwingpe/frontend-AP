@@ -9,10 +9,8 @@ import { StorageService } from 'src/app/services/storage.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  persona: Persona =  null
+  persona: Persona =  new Persona("","","","","","","","","","","","");
  
-  
-
   constructor(public personaService: PersonaService, 
     private storageService: StorageService){ }
 

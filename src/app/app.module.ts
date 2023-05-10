@@ -11,9 +11,7 @@ import { IndexComponent } from './components/index/index.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { IndexModalComponent } from './components/index/index-modal/index-modal.component';
 import { LoginComponent } from './components/login/login.component';
-import { AboutModalComponent } from './components/about/about-modal/about-modal.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EditExperienciaComponent } from './components/experience/edit-experiencia/edit-experiencia/edit-experiencia.component';
 import { NewExperienciaComponent } from './components/experience/new-experiencia/new-experiencia/new-experiencia.component';
@@ -24,6 +22,7 @@ import { HabilidadesComponent } from './components/habilidades/habilidades.compo
 import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilidad/nueva-habilidad.component';
 import { EditHabilidadComponent } from './components/habilidades/edit-habilidad/edit-habilidad.component';
 import { EditIndexComponent } from './components/index/edit-index.component';
+import { EditAboutComponent } from './components/about/edit-about.component';
 
 
 
@@ -36,7 +35,6 @@ import { EditIndexComponent } from './components/index/edit-index.component';
     AboutComponent,
     ProjectsComponent,
     LoginComponent,
-    AboutModalComponent,
     ExperienceComponent,
     EditExperienciaComponent,
     NewExperienciaComponent,
@@ -47,6 +45,7 @@ import { EditIndexComponent } from './components/index/edit-index.component';
     NuevaHabilidadComponent,
     EditHabilidadComponent,
     EditIndexComponent,
+    EditAboutComponent,
     
   ],
   imports: [

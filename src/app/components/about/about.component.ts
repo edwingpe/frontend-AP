@@ -9,7 +9,7 @@ import { StorageService } from 'src/app/services/storage.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-  persona: Persona = null
+  persona: Persona =  new Persona("","","","","","","","","","","","");
 
   
   constructor(public personaService: PersonaService, 

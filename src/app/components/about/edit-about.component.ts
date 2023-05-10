@@ -4,13 +4,12 @@ import { Persona } from 'src/app/models/persona';
 import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
-  selector: 'app-edit-index',
-  templateUrl: './edit-index.component.html',
-  styleUrls: ['./edit-index.component.css']
+  selector: 'app-edit-about',
+  templateUrl: './edit-about.component.html',
+  styleUrls: ['./edit-about.component.css']
 })
-export class EditIndexComponent implements OnInit {
+export class EditAboutComponent implements OnInit {
   persona: Persona =  new Persona("","","","","","","","","","","","");
-  
   
   constructor(
     private personaService: PersonaService, 
@@ -27,20 +26,17 @@ export class EditIndexComponent implements OnInit {
         this.router.navigate([''])
       }
     )
-      
-    }
+  }
 
-    onUpdate(): void {
-      const id = this.activatedRouter.snapshot.params['id'];
-      this.personaService.actualizar(id, this.persona).subscribe(
-        data => {
-          this.router.navigate(['index'])
-        }, err => {
-          alert('Actualizado')
-          this.router.navigate(['index']);
-        }
-      )
-    }
-
+  onUpdate(): void {
+    const id = this.activatedRouter.snapshot.params['id'];
+    this.personaService.actualizar(id, this.persona).subscribe(
+      data => {
+        this.router.navigate(['about'])
+      }, err => {
+        alert('Actualizado')
+        this.router.navigate(['about']);
+      }
+    )
+  }
 }
-
