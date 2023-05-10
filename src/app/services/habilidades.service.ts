@@ -7,8 +7,8 @@ import { Habilidades } from '../models/habilidades';
   providedIn: 'root'
 })
 export class HabilidadesService {
-  URL = 'http://localhost:8080/habilidades'
-  /*URL = 'https://backend-ap-p444.onrender.com/habilidades/' */
+  /* URL = 'http://localhost:8080/habilidades' */
+  URL = 'https://backend-ap-p444.onrender.com/habilidades/'
 
   constructor(private httpClient: HttpClient) { }
 

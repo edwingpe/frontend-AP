@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  experienciaURL = 'http://localhost:8080/experiencia'
-  /* experienciaURL = 'https://backend-ap-p444.onrender.com/experiencia' */
+  /* experienciaURL = 'http://localhost:8080/experiencia' */
+  experienciaURL = 'https://backend-ap-p444.onrender.com/experiencia'
 
   constructor(private httpClient: HttpClient) { }
 
