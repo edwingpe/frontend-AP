@@ -7,8 +7,8 @@ import { Persona } from '../models/Persona';
   providedIn: 'root'
 })
 export class PersonaService {
- /*  URL = 'http://localhost:8080/api/personas'; */
-  URL = 'https://backend-ap-p444.onrender.com/api/personas';
+  URL = 'http://localhost:8080/api/personas';
+  /* URL = 'https://backend-ap-p444.onrender.com/api/personas'; */
   
 
 

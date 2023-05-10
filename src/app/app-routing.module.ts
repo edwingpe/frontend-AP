@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './components/index/index.component';
 import { IndexModalComponent } from './components/index/index-modal/index-modal.component';
 import { AboutComponent } from './components/about/about.component';
-import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ExperienceComponent } from './components/experience/experience.component';
@@ -11,6 +10,9 @@ import { EditExperienciaComponent } from './components/experience/edit-experienc
 import { NewExperienciaComponent } from './components/experience/new-experiencia/new-experiencia/new-experiencia.component';
 import { NewEducacionComponent } from './components/educacion/new-educacion/new-educacion.component';
 import { EditEducacionComponent } from './components/educacion/edit-educacion/edit-educacion.component';
+import { HabilidadesComponent } from './components/habilidades/habilidades.component';
+import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilidad/nueva-habilidad.component';
+import { EditHabilidadComponent } from './components/habilidades/edit-habilidad/edit-habilidad.component';
 
 const routes: Routes = [
   
@@ -22,7 +24,9 @@ const routes: Routes = [
   {path: 'edit-expe/:id',component: EditExperienciaComponent},
   {path: 'nueva-educacion', component: NewEducacionComponent},
   {path: 'edit-educacion/:id', component: EditEducacionComponent},
-  {path: 'skills', component:SkillsComponent},
+  {path: 'habilidades', component:HabilidadesComponent},
+  {path: 'nueva-habilidad', component: NuevaHabilidadComponent},
+  {path: 'edit-habilidad/:id', component: EditHabilidadComponent},
   {path: 'projects', component:ProjectsComponent},
   {path: 'contact', component:ContactComponent},
   {path: '', redirectTo: '/index', pathMatch: 'full' },

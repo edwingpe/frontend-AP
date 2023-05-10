@@ -1,0 +1,30 @@
+<div class="container" *ngIf="habilidad">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Nueva habilidad</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="nombre" class="form-label">Empresa: </label>
+                        <input type="text" class="form-control" id="nombre" name="nombre"
+                            [(ngModel)]="habilidad.nombre" required placeholder="" value="">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="porcentaje" class="form-label">Cargo: </label>
+                        <input type="text" class="form-control" id="porcentaje" name="porcentaje"
+                            placeholder="" [(ngModel)]="habilidad.porcentaje" required>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" routerLink="/habilidades">Cerrar</button>
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+        </div>
+    </form>
+</div>
