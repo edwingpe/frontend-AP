@@ -22,11 +22,11 @@ export class NuevaHabilidadComponent implements OnInit{
     const habilidad = new Habilidades(this.nombre, this.porcentaje);
     this.habilidadesService.guardar(habilidad).subscribe(
       data => {
-        alert("Habilidad Agregada")
+        alert("Error")
         this.router.navigate(['habilidades'])
       }, err => {
-        alert('Fallo')
-        this.router.navigate([''])
+        alert('Habilidad agregada')
+        this.router.navigate(['habilidades'])
       }
     )
   }

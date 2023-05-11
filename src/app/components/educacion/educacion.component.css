@@ -1,10 +1,7 @@
 .card-box {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
     width: 320px;
-    border: 1px solid red;
-    gap: 20px;
+    min-height: 200px;
 }
 
 .card-img {
@@ -14,12 +11,16 @@
     padding: 20px;
 }
 
-.card-content {
-    display: flex;
-    flex-direction: column;
+h2{
+    font-size: var(--fs-md);
 }
 
 .card-footer {
     padding: 5px;
     background-color: antiquewhite;
+}
+
+.col {
+    width: fit-content;
+    
 }
