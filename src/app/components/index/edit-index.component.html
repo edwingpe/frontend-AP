@@ -1,7 +1,7 @@
-<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="border border-2 rounded-bottom-5 p-3 p-3 shadow border-success">
     <div class="modal-content">
         <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Actualización de datos</h1>
+            <h1 class="modal-title fs-5 text-success fw-bold" id="">Actualización de datos</h1>
             <button type="button" class="btn-close" routerLink="/index" aria-label="Close"></button>
         </div>
         <div class="modal-body" *ngIf="persona.id">
@@ -38,8 +38,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" routerLink="/index">Cerrar</button>
-                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    <button type="submit" class="btn btn-success">Guardar Cambios</button>
                 </div>
             </form>
         </div>
