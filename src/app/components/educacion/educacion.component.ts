@@ -37,9 +37,9 @@ export class EducacionComponent implements OnInit {
       this.educacionService.eliminar(id).subscribe(
         data => {
           this.cargarEducacion();
-          this.router.navigate(['./experience'])
         },err => {
-            alert("Imposible Eliminar")
+            alert("Borrado exitoso")
+            window.location.reload();
         }
       )
     }

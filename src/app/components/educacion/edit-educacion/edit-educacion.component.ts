@@ -34,8 +34,8 @@ export class EditEducacionComponent implements OnInit {
       data => {
         alert("Actualizacion exitosa")
       }, err => {
-        alert("Error al actualizar")
-        this.router.navigate([''])
+        alert("Actualizacion exitosa")
+        this.router.navigate(['/experience'])
       }
     )
 

@@ -37,6 +37,7 @@ export class ExperienceComponent implements OnInit{
       this.experienciaService.eliminar(id).subscribe(
         data => {
           this.cargarExperiencia();
+          alert("Borrado Exitoso")
         },err =>{
           alert('No se pudo');
         }

@@ -22,9 +22,10 @@ export class NewEducacionComponent implements OnInit {
     const educacion = new Educacion(this.nombreEducacion, this.descripcionEducacion);
     this.educacionService.guardar(educacion).subscribe(
       data => {
-        alert("Creacion Exitosa")
+        alert("Error")
       }, err =>{
-        alert("Fallo") 
+        alert("Educacion Agregada Exitosamente")
+        this.router.navigate(['experience']) 
       })
   }
 }

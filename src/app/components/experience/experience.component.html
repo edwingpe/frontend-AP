@@ -1,44 +1,45 @@
-<main class="container-fluid d-flex justify-content-around d-flex flex-wrap flex-md-nowrap">
-    <div class="container position-relative">
-        <div class="new-btn position-absolute top-0 start-100 translate-middle">
+<main class="container d-flex justify-content-around d-flex flex-wrap flex-md-nowrap">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-center p-2">
+            <span class="main-title flex-grow-1">Experiencia Laboral</span>
             <a class="edit-btn" type="button" routerLink="/nueva-experiencia" *ngIf="isLogged">
                 <i class="fa-solid fa-square-plus fa-2xl" style="color: #ff5b5b;"></i>
             </a>
         </div>
 
-        <div class="row">
-            <h2>Experiencia Laboral</h2>
-            <div class="col d-flex flex-wrap" *ngFor="let Experiencia of experiencia">
-                <div class="d-flex card p-3 mb-2 shadow border-1">
-                    <div class="d-flex align-items-center">
+        <div class="row d-flex justify-content-center">
+            <div *ngFor="let Experiencia of experiencia" class="col-auto d-flex">
+                <div class="d-flex card p-3 mb-2 shadow">
+                    <div class="d-flex align-items-center gap-3">
                         <div class="icon"></div>
-                        <div class="m-2 c-details flex-grow-1 text-center">
-                            <h4>{{Experiencia.nombreExperiencia}}</h4>
-                            <h5>{{Experiencia.tituloExperiencia}}</h5>
+                        <div class="text-wrap text-center">
+                            <div class="d-flex align-items-center title-box gap-1">
+                                <h2>{{Experiencia.nombreExperiencia}}</h2>
+                                <h3>{{Experiencia.tituloExperiencia}}</h3>
+                            </div>
+                            <h3 class="heading">
+                                <h3>{{Experiencia.descripcionExperiencia}}</h3>
+                            </h3>
+                            <div class="d-flex flex-grow-1">
+                                <span>{{Experiencia.fechaInicioExperiencia}}</span>
+                                <span>{{Experiencia.fechaFinalExperiencia}}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="text-wrap text-center">
-                        <h3 class="heading">{{Experiencia.descripcionExperiencia}}</h3>
-                    </div>
-                    <div class="card-footer d-flex" *ngIf="isLogged">
-                        <div class="d-flex flex-grow-1">
-                            <span>{{Experiencia.fechaInicioExperiencia}}</span>
-                            <span>{{Experiencia.fechaFinalExperiencia}}</span>
+                        <div class="d-flex flex-column gap-3" *ngIf="isLogged">
+                            <a class="edit-btn mx-1" type="button"
+                                routerLink='/edit-expe/{{Experiencia.experienciaId}}'>
+                                <i class="fa-solid fa-pen fa-lg" style="color: #71ad01;"></i>
+                            </a>
+                            <a class="edit-btn mx-1" type="button" (click)="delete(Experiencia.experienciaId)">
+                                <i class="fa-solid fa-trash fa-lg" style="color: #d52b2b;"></i>
+                            </a>
                         </div>
-                        <button class="edit-btn mx-1" type="button"
-                            routerLink='/edit-expe/{{Experiencia.experienciaId}}'>
-                            <i class="fa-solid fa-pen fa-lg" style="color: #ff5b5b;"></i>
-                        </button>
-                        <button class="edit-btn mx-1" type="button" (click)="delete(Experiencia.experienciaId)">
-                            <i class="fa-solid fa-trash fa-lg" style="color: #d52b2b;"></i>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid position-relative">
-        
+    <div class="container d-flex justify-content-around d-flex flex-wrap flex-md-nowrap">
         <app-educacion></app-educacion>
     </div>
 

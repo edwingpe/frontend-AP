@@ -1,32 +1,32 @@
-<section class="container d-flex justify-content-center flex-column align-items-center position-relative border border-1">
-    <div class="new-btn position-absolute top-0 start-100 translate-middle">
-        <button class="edit-btn" type="button" routerLink="/nueva-educacion" *ngIf="isLogged">Agregar Educacion
-        </button>
-        <i class="fa-solid fa-square-plus fa-2xl" style="color: #ff5b5b;"></i>
-    </div>
-    <h2>Educacion</h2>
-    <div class="row row-cols-3 gap-1">
-        <div *ngFor="let Educacion of educacion" class="col p-0 m-0">
-            <div  class="d-flex flex-column card-box border border-1 shadow-sm rounded-3">
-                <div class="d-flex justify-content-around align-items-center flex-grow-1 flex-shrink-1">
-                    <div class="card-img m-1">
+<main class="container d-flex justify-content-around d-flex flex-wrap flex-md-nowrap flex-column">
+    <section class="d-flex align-items-center justify-content-center p-2">
+        <span class="main-title flex-grow-1">Educacion</span>
+        <div class="new-btn ">
+            <a class="edit-btn" type="button" routerLink="/nueva-educacion" *ngIf="isLogged"><i
+                    class="fa-solid fa-square-plus fa-2xl" style="color: #ff5b5b;"></i>
+            </a>
+        </div>
+    </section>
+
+    <div class="row d-flex justify-content-center">
+        <div *ngFor="let Educacion of educacion" class="col-auto d-flex">
+            <div class="d-flex card p-3 mb-2 shadow rounded-3">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="icon"></div>
+                    <div class="title-box">
+                        <h2>{{Educacion.nombreEducacion}}</h2>
+                        <h3>{{Educacion.descripcionEducacion}}</h3>
                     </div>
-                    <div class="flex-grow-1 text-center m-1">
-                        <span>{{Educacion.nombreEducacion}}</span>
-                        <h2>{{Educacion.descripcionEducacion}}</h2>
+                    <div class="d-flex flex-column gap-3" *ngIf="isLogged">
+                        <a type="button" routerLink="/edit-educacion/{{Educacion.educacionId}}"><i class="fa-solid fa-pen fa-lg"
+                                style="color: #71ad01;"></i>
+                        </a>
+                        <a type="button" (click)="borrar(Educacion.educacionId)"><i class="fa-sharp fa-solid fa-trash fa-lg"
+                                style="color: #c40000;"></i>
+                        </a>
                     </div>
-                </div>
-                <div class="card-footer" *ngIf="isLogged">
-                    <button routerLink="/edit-educacion/{{Educacion.educacionId}}"><i class="fa-solid fa-gear fa-lg"
-                            style="color: #71ad01;"></i>
-                        Editar
-                    </button>
-                    <button (click)="borrar(Educacion.educacionId)"><i class="fa-sharp fa-solid fa-trash fa-lg"
-                            style="color: #c40000;"></i>
-                        Borrar
-                    </button>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</main>

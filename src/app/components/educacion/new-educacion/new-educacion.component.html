@@ -1,29 +1,29 @@
-<div class="container">
+<div class=" container border border-2 rounded-bottom-5 p-3 p-3 shadow border-success">
     <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="modal-content">
+        <div class="modal-content gap-3">
             <div class="modal-header">
-                <h1 class="modal-title fs-5">Nueva Educacion</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h1 class="modal-title fs-5 text-success fw-bold">Nueva Educacion</h1>
+                <button type="button" routerLink="/experience" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row g-3">
                     <div class="col-sm-6">
-                        <label for="nombreEducacion" class="form-label">Empresa: </label>
+                        <label for="nombreEducacion" class="form-label">Institucion: </label>
                         <input type="text" class="form-control" id="nombreEducacion" name="nombreEducacion"
                             [(ngModel)]="nombreEducacion" required placeholder="" value="">
                     </div>
 
                     <div class="col-sm-6">
-                        <label for="descripcionEducacion" class="form-label">Cargo: </label>
+                        <label for="descripcionEducacion" class="form-label">Titulo: </label>
                         <input type="text" class="form-control" id="descripcionEducacion" name="descripcionEducacion"
                             placeholder="" [(ngModel)]="descripcionEducacion" required>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" routerLink="/experience">Cerrar</button>
-                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                <button type="submit" class="btn btn-success">Guardar Cambios</button>
             </div>
         </div>
     </form>

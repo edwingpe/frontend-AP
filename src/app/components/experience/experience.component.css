@@ -1,12 +1,17 @@
 .card {
     border-radius: 10px;
-    width: 350px;
-    min-height: 200px;
+    min-width: 200px;
+    min-height: 120px;
+    
 }
 
-.c-details span {
-    font-weight: 300;
-    font-size: 13px
+.title-box h2, h3, span {
+    font-size: var(--fs-sm);
+}
+
+.title-box h2 {
+    color: brown;
+    font-weight: 600;
 }
 
 .icon {
@@ -16,23 +21,3 @@
     border-radius: 15px;
 }
 
-.badge span {
-    background-color: #fffbec;
-    width: 60px;
-    height: 25px;
-    padding-bottom: 3px;
-    border-radius: 5px;
-    display: flex;
-    color: #fed85d;
-    justify-content: center;
-    align-items: center
-}
-
-.text1 {
-    font-size: 14px;
-    font-weight: 600
-}
-
-.text2 {
-    color: #a5aec0
-}
