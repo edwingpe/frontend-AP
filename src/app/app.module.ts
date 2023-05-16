@@ -23,6 +23,8 @@ import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilida
 import { EditHabilidadComponent } from './components/habilidades/edit-habilidad/edit-habilidad.component';
 import { EditIndexComponent } from './components/index/edit-index.component';
 import { EditAboutComponent } from './components/about/edit-about.component';
+import { EditProjectComponent } from './components/projects/edit-project.component';
+import { NewProjectComponent } from './components/projects/new-project.component';
 
 
 
@@ -46,6 +48,8 @@ import { EditAboutComponent } from './components/about/edit-about.component';
     EditHabilidadComponent,
     EditIndexComponent,
     EditAboutComponent,
+    EditProjectComponent,
+    NewProjectComponent,
     
   ],
   imports: [

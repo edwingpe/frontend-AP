@@ -9,30 +9,5 @@ import { PersonaService } from './services/persona.service';
 })
 export class AppComponent {
   title = 'frontend-AP';
-
-  persona: Persona = new Persona("","","","","","","","","","","","");
-  data: any[] = [];
-  
-
-  constructor(public personaService: PersonaService){}
-
-  /* ngOnInit():void{
-    this.getData();
-    this.getPersona();
-    
-  }
-
-  getData(){
-    this.personaService.getData().subscribe( data => {
-      this.data = data;
-      console.log(this.data);
-    })
-  }
-
-  getPersona(){
-    this.personaService.getPersona().subscribe( data => {
-      this.persona = data;
-      console.log(this.persona);
-    }) */
   
 }

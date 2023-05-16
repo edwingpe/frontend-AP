@@ -13,6 +13,8 @@ import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilida
 import { EditHabilidadComponent } from './components/habilidades/edit-habilidad/edit-habilidad.component';
 import { EditIndexComponent } from './components/index/edit-index.component';
 import { EditAboutComponent } from './components/about/edit-about.component';
+import { NewProjectComponent } from './components/projects/new-project.component';
+import { EditProjectComponent } from './components/projects/edit-project.component';
 
 const routes: Routes = [
   
@@ -30,6 +32,8 @@ const routes: Routes = [
   {path: 'nueva-habilidad', component: NuevaHabilidadComponent},
   {path: 'edit-habilidad/:id', component:EditHabilidadComponent},
   {path: 'projects', component:ProjectsComponent},
+  {path: 'new-project', component:NewProjectComponent},
+  {path: 'edit-project/:id', component: EditProjectComponent},
 ];
 
 @NgModule({

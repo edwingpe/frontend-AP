@@ -1,0 +1,36 @@
+<div class="container border border-2 rounded-bottom-5 p-3 p-3 shadow border-success" *ngIf="proyecto">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="modal-content gap-3">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 text-success fw-bold">Editar Proyecto</h1>
+                <button type="button" routerLink="/projects" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-sm-12">
+                        <label for="nombre" class="form-label">Proyecto: </label>
+                        <input type="text" class="form-control" id="nombre" name="nombre"
+                            [(ngModel)]="proyecto.nombre" required placeholder="" value="">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <label for="url" class="form-label">URL: </label>
+                        <input type="text" class="form-control" id="url" name="url"
+                            placeholder="" [(ngModel)]="proyecto.url" required>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <label for="imgurl" class="form-label">Imagen: </label>
+                        <input type="text" class="form-control" id="imgurl" name="imgurl" placeholder=""
+                            [(ngModel)]="proyecto.imgUrl" required>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Guardar Cambios</button>
+            </div>
+        </div>
+    </form>
+</div>
