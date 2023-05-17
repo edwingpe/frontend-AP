@@ -1,26 +1,28 @@
-<div class="container position-relative">
-    <h2>Habilidades</h2>
-    <div class="new-btn position-absolute top-0 start-100 translate-middle">
+<div class="container">
+    <div class="d-flex align-items-center pb-4">
+        <span class="main-title flex-grow-1">Habilidades</span>
         <a class="btn" type="button" routerLink="/nueva-habilidad" *ngIf="isLogged">
             <i class="fa-solid fa-square-plus fa-2xl" style="color: #ff5b5b;"></i>
         </a>
     </div>
     <div class="row">
-        <div *ngFor="let Habilidad of habilidad" class="col">
-            <h3 class="progress-title">{{Habilidad.nombre}} - {{Habilidad.porcentaje}}%</h3>
-            <div class="progress">
-                <div class="progress-bar progress-bar-danger progress-bar-striped active" [style.width]="Habilidad.porcentaje + '%'"></div>
+        <div *ngFor="let Habilidad of habilidad" class="col-12 p-3">
+            <div class="d-flex align-items-center">
+                <span class="flex-grow-1">{{Habilidad.nombre}} - {{Habilidad.porcentaje}}%</span>
+                <div class="d-flex gap-3" *ngIf="isLogged">
+                    <a class="edit-btn" type="button" routerLink='/edit-habilidad/{{Habilidad.id}}'>
+                        <i class="fa-solid fa-pen fa-md" style="color: #71ad01;"></i>
+                    </a>
+                    <a class="edit-btn" type="button" (click)="delete(Habilidad.id)">
+                        <i class="fa-solid fa-trash fa-md" style="color: #d52b2b;"></i>
+                    </a>
+                </div>
             </div>
-            <div class="mt-3" *ngIf="isLogged">
-                <a class="edit-btn" type="button" routerLink='/edit-habilidad/{{Habilidad.id}}' >
-                    <i class="fa-solid fa-pen fa-lg" style="color: #ff5b5b;"></i>
-                </a>
+            <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar text-bg-warning" [style.width]="Habilidad.porcentaje + '%'"></div>
             </div>
-            <div class="mt-3" *ngIf="isLogged">
-                <a class="edit-btn" type="button" (click)="delete(Habilidad.id)">
-                    <i class="fa-solid fa-trash fa-lg" style="color: #d52b2b;"></i>
-                </a>
-            </div>
+
         </div>
     </div>
 </div>
