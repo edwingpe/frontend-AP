@@ -7,9 +7,10 @@
         <div class="modal-body" *ngIf="persona">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="row g-3">
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                         <label for="descripcion" class="form-label">Sobre ti:</label>
-                        <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.descripcion" required>
+                        <textarea cols="30" rows="10" type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.descripcion" required>
+                        </textarea>
                     </div>
 
                     <div class="col-12">
